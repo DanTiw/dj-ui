@@ -20,9 +20,7 @@ export default function RootLayout({
 	return (
 		<html lang="en" className={`${geist.variable}`}>
 			<body className="min-h-screen bg-background antialiased">
-				<main className="min-h-screen py-10">
-					{children}
-				</main>
+				<main className="min-h-screen py-10">{children}</main>
 			</body>
 		</html>
 	);

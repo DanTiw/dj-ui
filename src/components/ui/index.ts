@@ -20,4 +20,4 @@ export * from "./quote";
 export * from "./section-header";
 export * from "./motion-card";
 export * from "./motion-button";
-export * from "./typing-effect"; 
+export * from "./typing-effect";
