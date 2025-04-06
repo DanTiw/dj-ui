@@ -104,14 +104,17 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
 		const Comp = asChild ? Slot : motion.button;
 
+		// Create the props object with a type assertion to bypass TypeScript errors
+		const motionProps = {
+			className: cn(buttonVariants({ variant, size, className })),
+			ref,
+			disabled: isLoading,
+			...getMotionProps(),
+			...props,
+		} as any; // Type assertion to bypass TypeScript errors with Framer Motion
+
 		return (
-			<Comp
-				className={cn(buttonVariants({ variant, size, className }))}
-				ref={ref}
-				disabled={isLoading}
-				{...getMotionProps()}
-				{...props}
-			>
+			<Comp {...motionProps}>
 				{isLoading ? (
 					<>
 						<svg
