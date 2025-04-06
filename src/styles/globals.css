@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme {
+	--font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif,
+		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@layer base {
+  :root {
+    --background: white;
+    --foreground: 0 0% 0%;
+
+    --card: 51 100% 50%;
+    --card-foreground: 0 0% 0%;
+
+    --popover: 51 100% 50%;
+    --popover-foreground: 0 0% 0%;
+
+    --primary: 51 100% 50%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 0 0% 100%;
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 60 33% 90%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 51 80% 60%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 0%;
+
+    --border: 0 0% 0%;
+    --input: 0 0% 0%;
+    --ring: 0 0% 0%;
+
+    --radius: 0rem;
+  }
+
+  .dark {
+    --background: 51 100% 50%;
+    --foreground: 0 0% 0%;
+
+    --card: 51 100% 50%;
+    --card-foreground: 0 0% 0%;
+
+    --popover: 51 100% 50%;
+    --popover-foreground: 0 0% 0%;
+
+    --primary: 51 100% 50%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 0 0% 100%;
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 60 33% 90%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 51 80% 60%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 0%;
+
+    --border: 0 0% 0%;
+    --input: 0 0% 0%;
+    --ring: 0 0% 0%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-solid border-[hsl(var(--border))];
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
